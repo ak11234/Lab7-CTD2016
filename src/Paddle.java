@@ -23,17 +23,4 @@ public class Paddle extends GRect {
     public void setY(double coord){
         super.setLocation(getX(), coord);
     }
-    public double getX(){
-        return super.getX();
-    }
-    public double getY(){
-        return super.getY();
-    }
-    public double getWidth(){
-        return super.getWidth();
-    }
-    public double getHeight(){
-        return super.getHeight();
-    }
-
 }
