@@ -1,5 +1,6 @@
 import acm.program.*;
 import acm.graphics.*;
+import java.awt.event.MouseEvent;
 
 import java.awt.Color;
 
@@ -32,6 +33,31 @@ public class Box extends GraphicsProgram
         add(myPaddleLeft);
         add(myPaddleRight);
         add(myPaddleTop);
+        addMouseListeners();
+    }
+    public void mouseMoved(MouseEvent e)
+    {
+        double y, x;
+
+        y = e.getY();
+
+        if (y < 0)
+            y = 0;
+
+        if (y > getHeight() - 100)
+            y = getHeight() - 100;
+
+        myPaddleLeft.setY(y);
+        myPaddleRight.setY(y);
+        x = e.getX();
+        if (x < 0)
+            x = 0;
+
+        if (x > getHeight() - 100)
+            x = getHeight() - 100;
+
+        myPaddleTop.setX(x);
+        myPaddleBottom.setX(x);
     }
     
     public void run()
