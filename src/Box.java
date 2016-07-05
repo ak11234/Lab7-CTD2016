@@ -15,7 +15,7 @@ public class Box extends GraphicsProgram
         
         for (int k = 0 ; k < 17 ; k++)
         {
-            myBall[k] = new Ball(getWidth() * Math.random(), 
+            myBall[k] = new PulsingBall(getWidth() * Math.random(),
                                  getHeight() * Math.random(), (Math.random()*8)+2, 
                                  new Color((int)(256 * Math.random()), (int)(256 * Math.random()), (int)(256 * Math.random())), 
                                  10 * Math.random() - 5, 
