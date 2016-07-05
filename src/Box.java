@@ -44,8 +44,8 @@ public class Box extends GraphicsProgram
         if (y < 0)
             y = 0;
 
-        if (y > getHeight() - 100)
-            y = getHeight() - 100;
+        if (y > getHeight() - myPaddleRight.getHeight())
+            y = getHeight() - myPaddleRight.getHeight();
 
         myPaddleLeft.setY(y);
         myPaddleRight.setY(y);
@@ -53,8 +53,8 @@ public class Box extends GraphicsProgram
         if (x < 0)
             x = 0;
 
-        if (x > getHeight() - 100)
-            x = getHeight() - 100;
+        if (x > getWidth() - myPaddleBottom.getWidth())
+            x = getWidth() - myPaddleBottom.getWidth();
 
         myPaddleTop.setX(x);
         myPaddleBottom.setX(x);
