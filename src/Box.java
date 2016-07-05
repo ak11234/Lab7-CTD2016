@@ -8,6 +8,7 @@ public class Box extends GraphicsProgram
 {
     private Ball[] myBall;
     private Paddle myPaddleTop, myPaddleBottom, myPaddleRight, myPaddleLeft;
+    private Score myScore;
     public static void main(String[] args){
         new Box().start();
     }
@@ -34,6 +35,8 @@ public class Box extends GraphicsProgram
         add(myPaddleRight);
         add(myPaddleTop);
         addMouseListeners();
+        myScore = new Score(100, 100);
+        add(myScore);
     }
     public void mouseMoved(MouseEvent e)
     {
@@ -81,5 +84,8 @@ public class Box extends GraphicsProgram
     }
     public Paddle getMyPaddleLeft(){
         return myPaddleLeft;
+    }
+    public Score getScore(){
+        return myScore;
     }
 }

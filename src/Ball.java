@@ -43,6 +43,7 @@ public class Ball extends GOval
                 System.out.println("top");
                 myYVelocity = -myYVelocity;
                 setLocation(getX(),myBox.getMyPaddleBottom().getHeight());
+                myBox.getScore().add(1);
             }
         }
         if (getY()+getHeight() >= myBox.getMyPaddleBottom().getY()){
@@ -50,6 +51,7 @@ public class Ball extends GOval
                 myYVelocity = -myYVelocity;
                 setLocation(getX(),myBox.getMyPaddleBottom().getY()-getHeight());
                 System.out.println("bottom");
+                myBox.getScore().add(1);
             }
         }
         if (getX() <= myBox.getMyPaddleLeft().getWidth()){
@@ -57,6 +59,7 @@ public class Ball extends GOval
                 myXVelocity = -myXVelocity;
                 System.out.println("left");
                 setLocation(myBox.getMyPaddleLeft().getWidth(),getY());
+                myBox.getScore().add(1);
             }
         }
         if (getX() >= myBox.getMyPaddleRight().getX()-getWidth()){
@@ -64,6 +67,7 @@ public class Ball extends GOval
                 setLocation(myBox.getMyPaddleRight().getX()-getWidth(),getY());
                 myXVelocity = -myXVelocity;
                 System.out.println("right");
+                myBox.getScore().add(1);
             }
         }
         
