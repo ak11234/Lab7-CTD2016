@@ -6,6 +6,7 @@ import java.awt.Color;
 public class Box extends GraphicsProgram
 {
     private Ball[] myBall;
+    private Paddle myPaddleTop, myPaddleBottom, myPaddleRight, myPaddleLeft;
     public static void main(String[] args){
         new Box().start();
     }
@@ -23,6 +24,14 @@ public class Box extends GraphicsProgram
                                  this);
             add(myBall[k]);
         }
+        myPaddleTop = new Paddle(getWidth()/2, 0, 200, 20, Color.black, this);
+        myPaddleBottom = new Paddle(getWidth()/2, (getHeight()-40), 200, 20, Color.black, this);
+        myPaddleLeft = new Paddle(0, getHeight()/2, 20, 200, Color.black, this);
+        myPaddleRight = new Paddle(getWidth()-20, getHeight()/2, 20, 200, Color.black, this);
+        add(myPaddleBottom);
+        add(myPaddleLeft);
+        add(myPaddleRight);
+        add(myPaddleTop);
     }
     
     public void run()
