@@ -70,4 +70,16 @@ public class Box extends GraphicsProgram
             pause(100);
         }
     }
+    public Paddle getMyPaddleTop(){
+        return  myPaddleTop;
+    }
+    public Paddle getMyPaddleBottom(){
+        return myPaddleBottom;
+    }
+    public Paddle getMyPaddleRight(){
+        return myPaddleRight;
+    }
+    public Paddle getMyPaddleLeft(){
+        return myPaddleLeft;
+    }
 }
